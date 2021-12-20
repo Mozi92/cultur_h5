@@ -1,4 +1,4 @@
-import Vue from 'vue';
+// import Vue from 'vue';
 
 /** 配置VUE */
 export default {
