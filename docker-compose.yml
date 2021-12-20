@@ -1,0 +1,8 @@
+version: '3.3'
+services:
+  cur_web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8666:8666
