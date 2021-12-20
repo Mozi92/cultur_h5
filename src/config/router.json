@@ -1,0 +1,16 @@
+{
+  "group": "主页",
+  "router": [
+    {
+      "path": "home",
+      "title": "主页",
+      "alias": "/",
+      "meta": {
+        "name": "home",
+        "group": "home",
+        "isMenu": false
+      },
+      "showMenu": false
+    }
+  ]
+}
