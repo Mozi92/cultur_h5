@@ -35,9 +35,9 @@ function myProxy() {
  * @returns {string}
  */
 function outputDirF() {
-    let outputDir = './dist'
+    let outputDir = './build'
     if (process.env.VUE_APP_build_mode !== 'unf') {
-        outputDir = './dist'
+        outputDir = './build'
     }
     return outputDir
 }
