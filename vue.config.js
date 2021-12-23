@@ -62,32 +62,32 @@ const ed = {
 
     productionSourceMap: false, // 生产环境是否生成 sourceMap 文件
 
-    configureWebpack(config) {
-        config.optimization = {
-            splitChunks: {
-                chunks: 'all',
-                minSize: 20000,
-                maxSize: 30000,
-                minChunks: 1,
-                maxAsyncRequests: 30,
-                maxInitialRequests: 25,
-                automaticNameDelimiter: '~',
-                automaticNameMaxLength: 30,
-                name: true,
-                cacheGroups: {
-                    vendors: {
-                        test: /[\\/]node_modules[\\/]/,
-                        priority: -10
-                    },
-                    default: {
-                        minChunks: 2,
-                        priority: -20,
-                        reuseExistingChunk: true
-                    }
-                }
-            }
-        }
-    },
+    // configureWebpack(config) {
+    //     config.optimization = {
+    //         splitChunks: {
+    //             chunks: 'all',
+    //             minSize: 20000,
+    //             maxSize: 30000,
+    //             minChunks: 1,
+    //             maxAsyncRequests: 30,
+    //             maxInitialRequests: 25,
+    //             automaticNameDelimiter: '~',
+    //             automaticNameMaxLength: 30,
+    //             name: true,
+    //             cacheGroups: {
+    //                 vendors: {
+    //                     test: /[\\/]node_modules[\\/]/,
+    //                     priority: -10
+    //                 },
+    //                 default: {
+    //                     minChunks: 2,
+    //                     priority: -20,
+    //                     reuseExistingChunk: true
+    //                 }
+    //             }
+    //         }
+    //     }
+    // },
 
     chainWebpack(config) {
         // it can improve the speed of the first screen, it is recommended to turn on preload
