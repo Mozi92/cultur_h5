@@ -1,0 +1,21 @@
+.linePro {
+
+  .van-progress {
+    height: 16px;
+    border-radius: 8px;
+  }
+
+  .linePro__item {
+    height: 20px;
+    margin-bottom: 8px;
+    justify-content: space-between;
+
+    .linePro__text {
+      width: 80px;
+    }
+
+    .linePro__progress {
+      width: calc(100% - 80px);
+    }
+  }
+}

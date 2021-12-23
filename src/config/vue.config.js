@@ -7,6 +7,8 @@ import VueBus from 'vue-bus';
 import context from './server.context';
 import apiUrl from '../config/api.url';
 import messageText from '../config/message.text';
+import {ChartConfig} from "./chart.config";
+import color from "./color.config";
 
 import ECharts from 'vue-echarts'
 import {use} from 'echarts/core'
@@ -120,6 +122,8 @@ export default {
         Vue.prototype.$apiUrl = apiUrl
         Vue.prototype.$messageText = messageText
         Vue.prototype.$util = myUtil
+        Vue.prototype.$chartConfig = ChartConfig
+        Vue.prototype.$colors = color
     },
 
 };

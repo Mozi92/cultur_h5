@@ -4,5 +4,13 @@
 @import "./base.scss";
 
 //components
+@import "./components/commBox.scss";
+@import "./components/lineUp.scss";
+@import "./components/myPicker.scss";
+@import "./components/descBox.scss";
+@import "./components/myTab.scss";
+@import "./components/verBox.scss";
+@import "./components/linePro.scss";
 
 //views
+@import "./views/home/index.scss";

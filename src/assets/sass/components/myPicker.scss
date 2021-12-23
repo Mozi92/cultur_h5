@@ -1,0 +1,23 @@
+.myPicker {
+
+  .van-cell::after {
+    border-bottom: none;
+  }
+
+  .van-field__body {
+    background: rgba(2, 121, 240, .1);
+    border-radius: 5px;
+    width: 120px;
+
+    .van-field__control {
+      font-size: 14px;
+      color: #0279F0;
+      padding: 4px 8px;
+    }
+
+    .van-field__control::placeholder {
+      font-size: 14px;
+      color: rgba(2, 121, 240, .6);
+    }
+  }
+}

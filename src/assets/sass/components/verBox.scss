@@ -1,0 +1,25 @@
+.verBox {
+  justify-content: space-between;
+
+  .verBox-item {
+    margin-bottom: 16px;
+
+    .verBox-item-top {
+      height: 20px;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: bold;
+      color: #0279F0;
+      margin-bottom: 2px;
+      text-align: center;
+    }
+
+    .verBox-item-bottom {
+      height: 20px;
+      line-height: 20px;
+      font-size: 14px;
+      color: #262727;
+      text-align: center;
+    }
+  }
+}

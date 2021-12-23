@@ -1,0 +1,12 @@
+.descBox {
+  flex-wrap: wrap;
+
+  .descBox-item {
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #262727;
+    margin-bottom: 16px;
+    margin-right: 16px;
+  }
+}
