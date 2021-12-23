@@ -2,7 +2,8 @@ module.exports = {
     plugins: {
         'postcss-pxtorem': {
             rootValue({file}) {
-                return file.indexOf('vant') !== -1 ? 37.5 : 75;
+                console.log('0000000000000000000000', file)
+                return 37.5;
             },
             propList: ['*'],
         },

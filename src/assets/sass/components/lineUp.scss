@@ -1,0 +1,24 @@
+.lineUp {
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .line-item {
+    .line-item-num {
+      height: 30px;
+      line-height: 30px;
+      font-size: 25px;
+      font-weight: bold;
+      color: #0279F0;
+      margin-bottom: 6px;
+      text-align: center;
+    }
+
+    .line-item-txt {
+      height: 20px;
+      line-height: 20px;
+      font-size: 14px;
+      color: #262727;
+      text-align: center;
+    }
+  }
+}

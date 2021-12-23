@@ -7,6 +7,17 @@ import VueBus from 'vue-bus';
 import context from './server.context';
 import apiUrl from '../config/api.url';
 import messageText from '../config/message.text';
+import {ChartConfig} from "./chart.config";
+import color from "./color.config";
+
+import ECharts from 'vue-echarts'
+import {use} from 'echarts/core'
+import {CanvasRenderer} from 'echarts/renderers'
+import {BarChart} from 'echarts/charts'
+import {GridComponent, TooltipComponent} from 'echarts/components'
+import "echarts";
+
+use([CanvasRenderer, BarChart, GridComponent, TooltipComponent]);
 
 const dataFormatStr = 'yyyy-MM-dd hh:mm'; // 时间输出格式
 /** 格式化输出相关工具集 */
@@ -89,6 +100,7 @@ export default {
         // 配置全局组件
         /** 我们可以再这个地方注入全局的组件，这样就不需要在每个页面单独的声明了 */
         Vue.use(Vant);
+        Vue.component('v-chart', ECharts)
 
         //懒加载
         Vue.use(Lazyload, {
@@ -110,6 +122,8 @@ export default {
         Vue.prototype.$apiUrl = apiUrl
         Vue.prototype.$messageText = messageText
         Vue.prototype.$util = myUtil
+        Vue.prototype.$chartConfig = ChartConfig
+        Vue.prototype.$colors = color
     },
 
 };

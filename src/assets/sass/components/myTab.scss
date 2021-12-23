@@ -1,0 +1,49 @@
+.myTab {
+  justify-content: space-between;
+  height: 30px;
+
+  .myTab__title {
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #262727;
+  }
+
+  .myTab__cont {
+
+    .myTab__item {
+      margin-right: 8px;
+
+      .myTab__item_txt {
+        height: 22px;
+        line-height: 22px;
+        font-size: 16px;
+        color: #262727;
+      }
+
+      .myTab__item_status {
+        //width: 10px;
+        height: 4px;
+        border-radius: 4px;
+      }
+
+
+    }
+
+    .myTab__item.active {
+
+      myTab__item_txt {
+        color: #262727;
+        font-weight: bold;
+      }
+
+      .myTab__item_status {
+        background: #0279F0;
+      }
+    }
+
+    .myTab__item:last-child {
+      margin-right: 0;
+    }
+  }
+}
