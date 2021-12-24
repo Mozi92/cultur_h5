@@ -69,6 +69,15 @@ export default {
                     title: '游客消费趋势分析', tabs: [{id: 1, text: '按日'}, {id: 2, text: '按月'}, {id: 3, text: '按年'},]
                 }
             },
+            navs: [
+                {text: '景区数据统计分析', tar: '#first'},
+                {text: '项目数据分析', tar: '#second'},
+                {text: '节假日趋势', tar: '#third'},
+                {text: '排行统计', tar: '#fourth'},
+                {text: '游客群体画像', tar: '#fifth'},
+                {text: '满意度分析', tar: '#sixth'},
+                {text: '实时视频'},
+            ],
             renderOption: {},
             renderOptionA: {},
             renderOptionB: {},
@@ -166,6 +175,13 @@ export default {
                 name: '购', color: _this.$colors.F
             }]
             this.renderOptionF = this.optionInstance.createLineOption(xAxis, series, series)
+        },
+        goPosition(v) {
+            if (!v.tar) {
+                this.$router.replace('/camera')
+            } else {
+                this.show = false
+            }
         }
     }, beforeDestroy() {
     }

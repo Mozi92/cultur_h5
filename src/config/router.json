@@ -11,6 +11,83 @@
         "isMenu": false
       },
       "showMenu": false
+    },
+    {
+      "path": "home",
+      "title": "主页",
+      "alias": "/first",
+      "meta": {
+        "name": "home",
+        "group": "home",
+        "isMenu": false
+      },
+      "showMenu": false
+    },
+    {
+      "path": "home",
+      "title": "主页",
+      "alias": "/second",
+      "meta": {
+        "name": "home",
+        "group": "home",
+        "isMenu": false
+      },
+      "showMenu": false
+    },
+    {
+      "path": "home",
+      "title": "主页",
+      "alias": "/third",
+      "meta": {
+        "name": "home",
+        "group": "home",
+        "isMenu": false
+      },
+      "showMenu": false
+    },
+    {
+      "path": "home",
+      "title": "主页",
+      "alias": "/fourth",
+      "meta": {
+        "name": "home",
+        "group": "home",
+        "isMenu": false
+      },
+      "showMenu": false
+    },
+    {
+      "path": "home",
+      "title": "主页",
+      "alias": "/fifth",
+      "meta": {
+        "name": "home",
+        "group": "home",
+        "isMenu": false
+      },
+      "showMenu": false
+    },
+    {
+      "path": "home",
+      "title": "主页",
+      "alias": "/sixth",
+      "meta": {
+        "name": "home",
+        "group": "home",
+        "isMenu": false
+      },
+      "showMenu": false
+    },
+    {
+      "path": "camera",
+      "title": "实时视频",
+      "alias": "/camera",
+      "meta": {
+        "name": "camera",
+        "group": "camera",
+        "isMenu": false
+      },
+      "showMenu": false
     }
   ]
 }
