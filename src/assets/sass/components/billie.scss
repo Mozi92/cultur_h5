@@ -1,0 +1,30 @@
+.billie {
+  margin-bottom: 16px;
+
+  .billie-txt {
+    .billie-txt-item {
+      width: 88px;
+      font-size: 14px;
+      color: #0279F0;
+    }
+
+    .billie-txt-item:last-child {
+      color: #EC808D;
+    }
+
+    margin-bottom: 8px;
+  }
+
+  .billie-progress {
+    width: 176px;
+    height: 10px;
+    background: #EC808D;
+    border-radius: 8px;
+
+    .billie-billie {
+      background: #0279F0;
+      border-radius: 8px;
+      height: 10px;
+    }
+  }
+}

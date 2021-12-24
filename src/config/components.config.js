@@ -6,6 +6,7 @@ import descBox from "@/components/descBox/descBox.vue";
 import myTab from "@/components/myTab/myTab.vue";
 import verBox from "@/components/verBox/verBox.vue";
 import linePro from "@/components/linePro/linePro.vue";
+import billie from "@/components/billie/billie.vue";
 
 /** 配置VUE */
 export default {
@@ -20,6 +21,7 @@ export default {
         Vue.component('my-tab', myTab)
         Vue.component('ver-box', verBox)
         Vue.component('line-pro', linePro)
+        Vue.component('n-billie', billie)
     },
 
 };

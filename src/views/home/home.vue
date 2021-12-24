@@ -66,9 +66,29 @@
         <line-pro :arr="arr4"></line-pro>
       </template>
     </comm-box>
-    <comm-box :title="titles.ten"></comm-box>
-    <comm-box :title="titles.eve"></comm-box>
-    <comm-box :title="titles.twl"></comm-box>
+    <comm-box :title="titles.ten">
+      <template v-slot:other>
+        <my-picker :columns="columns.fourth" @selected="selected"></my-picker>
+      </template>
+      <template v-slot:main>
+        <line-pro :arr="arr5"></line-pro>
+      </template>
+    </comm-box>
+    <comm-box :title="titles.eve">
+      <template v-slot:other>
+        <my-picker :columns="columns.fifth" @selected="selected"></my-picker>
+      </template>
+      <template v-slot:main>
+        <desc-box :arr="desc.fourth"></desc-box>
+        <n-billie :arr="arr6"></n-billie>
+        <v-chart class="pieChart" :option="renderOptionE"/>
+      </template>
+    </comm-box>
+    <comm-box :title="titles.twl">
+      <template v-slot:main>
+        <v-chart class="lineChart" :option="renderOptionF"/>
+      </template>
+    </comm-box>
   </div>
 </template>
 
