@@ -36,15 +36,30 @@ export default {
                 {text: '5三星堆', value: '11'},
                 {text: '6三星堆', value: '15'}
             ],
+            arr5: [
+                {text: '1四川省', value: '60'},
+                {text: '2浙江省', value: '80'},
+                {text: '3重庆市', value: '77'},
+                {text: '4湖南省', value: '33'},
+                {text: '5广东省', value: '55'},
+                {text: '6陕西省', value: '66'}
+            ],
+            arr6: [
+                {text: '男性45%', value: 60},
+                {text: '女性55%', value: 80},
+            ],
             columns: {
                 first: ['按项目数量', '按投资总额'],
                 second: ['元旦', '春节', '中秋', '清明', '端午', '国庆'],
-                third: ['今天', '本周', '本月', '本季度', '本年']
+                third: ['今天', '本周', '本月', '本季度', '本年'],
+                fourth: ['省份', '城市'],
+                fifth: ['全部群体', '团体', '散客'],
             },
             desc: {
                 first: [{text: '累计流量：546,222'}, {text: '同比增幅：32.32%'},],
                 second: [{text: '累计流量：546,222'}, {text: '同比增幅：32.32%'},],
-                third: [{text: '累计投诉数：32323232'},]
+                third: [{text: '累计投诉数：32323232'},],
+                fourth: [{text: '累计流量：546,222'}, {text: '同比增幅：32.32%'}, {text: '累计流量：546,222'}, {text: '同比增幅：32.32%'},],
             },
             tabs: {
                 first: {
@@ -54,11 +69,22 @@ export default {
                     title: '游客消费趋势分析', tabs: [{id: 1, text: '按日'}, {id: 2, text: '按月'}, {id: 3, text: '按年'},]
                 }
             },
+            navs: [
+                {text: '景区数据统计分析', tar: '#first'},
+                {text: '项目数据分析', tar: '#second'},
+                {text: '节假日趋势', tar: '#third'},
+                {text: '排行统计', tar: '#fourth'},
+                {text: '游客群体画像', tar: '#fifth'},
+                {text: '满意度分析', tar: '#sixth'},
+                {text: '实时视频'},
+            ],
             renderOption: {},
             renderOptionA: {},
             renderOptionB: {},
             renderOptionC: {},
             renderOptionD: {},
+            renderOptionE: {},
+            renderOptionF: {},
             optionInstance: optionInstance
         }
     }, mounted() {
@@ -67,7 +93,10 @@ export default {
         this.createB()
         this.createC()
         this.createD()
+        this.createE()
+        this.createF()
     }, activated() {
+        this.show = false
     }, deactivated() {
     }, methods: {
         selected(value) {
@@ -119,6 +148,40 @@ export default {
                 ],
                 position: 'inner', radius: '100%', right: '50%', formatter: '{c}', left: '60%', top: 'center'
             })
+        },
+        createE() {
+            this.renderOptionE = this.optionInstance.createEmptyCirclePie({
+                showLegend: false,
+                data: [{value: 1048, name: '18岁以下'}, {value: 735, name: '18~30'}, {
+                    value: 580,
+                    name: '30~40'
+                }, {value: 484, name: '40~60'}, {value: 300, name: '60岁以上'}],
+                position: 'inner',
+            })
+        },
+        createF() {
+            let _this = this;
+            let xAxis = ['一月', '二月', '三月', '四月', '五月', '六月']
+            let series = [{
+                name: '吃', color: _this.$colors.A
+            }, {
+                name: '娱', color: _this.$colors.B
+            }, {
+                name: '住', color: _this.$colors.C
+            }, {
+                name: '行', color: _this.$colors.D
+            }, {
+                name: '游', color: _this.$colors.E
+            }, {
+                name: '购', color: _this.$colors.F
+            }]
+            this.renderOptionF = this.optionInstance.createLineOption(xAxis, series, series)
+        },
+        goPosition(v) {
+            this.show = false
+            if (!v.tar) {
+                this.$router.replace('/camera')
+            }
         }
     }, beforeDestroy() {
     }
