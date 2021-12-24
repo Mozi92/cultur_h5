@@ -96,6 +96,7 @@ export default {
         this.createE()
         this.createF()
     }, activated() {
+        this.show = false
     }, deactivated() {
     }, methods: {
         selected(value) {
@@ -177,10 +178,9 @@ export default {
             this.renderOptionF = this.optionInstance.createLineOption(xAxis, series, series)
         },
         goPosition(v) {
+            this.show = false
             if (!v.tar) {
                 this.$router.replace('/camera')
-            } else {
-                this.show = false
             }
         }
     }, beforeDestroy() {
